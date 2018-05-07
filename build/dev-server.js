@@ -24,12 +24,10 @@ var autoOpenBrowser = !!config.dev.autoOpenBrowser
 var proxyTable = config.dev.proxyTable
 var app = express()
 var compiler = webpack(webpackConfig)
-console.log(3)
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
   quiet: true
 })
-console.log(4)
 var hotMiddleware = require('webpack-hot-middleware')(compiler, {
   log: () => {}
 })
